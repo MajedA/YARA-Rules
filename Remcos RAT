@@ -1,0 +1,30 @@
+rule RemcosRATByName
+{
+meta:
+ author = "@neonprimetime"
+ description = "Remcos RAT"
+strings:
+ $string0 = "Software\\Remcos"
+ $string1 = "\\remcos\\"
+ $string2 = "REMCOS v"
+condition:
+ 1 of them
+}
+
+rule RemcosRATByKeyword
+{
+meta:
+ author = "@neonprimetime"
+ description = "Remcos RAT"
+strings:
+ $string1 = "Keylogger Started"
+ $string2 = "Connected to C&C"
+ $string3 = "Screenshots"
+ $string4 = "OpenCamera"
+ $string5 = "Uploading file to C&C"
+ $string6 = "Initializing connection to C&C"
+ $string7 = "cleared!]"
+ $string8 = "EnableLUA /t REG_DWORD /d 0"
+condition:
+ 3 of them
+}
