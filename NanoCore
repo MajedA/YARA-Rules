@@ -1,0 +1,30 @@
+rule NanoCoreByName
+{
+meta:
+ author = "@neonprimetime"
+ description = "NanoCore"
+strings:
+ $string0 = "NanoCore Client"
+ $string1 = "NanoCore.Client"
+ $string2 = "NanoCoreBase"
+ $string5 = "NanoCoreSwiss"
+ $string6 = "NanoCoreStressTester"
+condition:
+ 1 of them
+}
+
+rule NanoCoreByKeyword
+{
+meta:
+ author = "@neonprimetime"
+ description = "NanoCore"
+strings:
+ $string1 = "NanoBrowser"
+ $string2 = "NanoScript"
+ $string3 = "SurveillanceEx"
+ $string4 = "NanoCoreStressTester"
+ $string5 = "accident-investigation.aero"
+ $string6 = "KeyboardLogging"
+condition:
+ 3 of them
+}
