@@ -1,0 +1,16 @@
+rule LokibotByKeyword
+{
+meta:
+ author = "@neonprimetime"
+ description = "Lokibot"
+strings:
+ $string1 = "fre.php"
+ $string2 = "Yandex\\YandexBrowser"
+ $string3 = "\\Mozilla\\SeaMonkey\\profiles.ini"
+ $string4 = "POP3 Password"
+ $string5 = "Software\\SimonTatham\\PuTTY\\Sessions"
+ $string6 = "EasyFTP\\data"
+ $string7 = "aPLib v1.01"
+condition:
+ 3 of them
+}
